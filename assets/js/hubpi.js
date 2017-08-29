@@ -200,7 +200,7 @@ $(function() {
   };
 
   /* config of user */
-  app.self.config = function(username, description, avatar, twitter, instagram, github, codepen) {
+  app.self.config = function(username, description, avatar, twitter, instagram, github, codepen, drupal) {
     $(app.id.username).append(username);
     $(app.id.description).append(description);
     $(app.id.avatar).append("<img class=\"avatar\" src=" + avatar + " alt='" + username + "'/>");
