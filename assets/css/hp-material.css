@@ -13,10 +13,10 @@
 @charset "UTF-8";
 
 /* Google Fonts */
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,300,700|RobotoDraft|Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700|RobotoDraft|Open+Sans);
 
 /* Icons FontAwesome */
-@import url(http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css);
 
 /* reset */
 html, body, div, span, applet, object, iframe,
