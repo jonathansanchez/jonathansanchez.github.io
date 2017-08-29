@@ -32,6 +32,7 @@ $(function() {
       /*twitter: twitter,
       instagram: instagram,*/
       github: github,
+      drupal: drupal
       //codepen: codepen
     },
     position: {
@@ -207,6 +208,7 @@ $(function() {
     $(app.id.github).append('<a href="https://github.com/' + github + '"><span class=\"fa fa-github\"></span></a>');
     $(app.id.codepen).append('<a href="http://codepen.io/' + github + '"><span class=\"fa fa-codepen\"></span></a>');
     $(app.id.instagram).append('<a href="http://instagram.com/' + instagram + '"><span class=\"fa fa-instagram\"></span></a>');
+    $(app.id.drupal).append('<a href="http://www.drupal.org/u/' + drupal + '"><span class=\"fa fa-drupal\"></span></a>');
       // app.log('User information:- ' + 'Username : ' + username + ' | Description : ' + description + ' | Twitter : ' + '@' + twitter + ' | GitHub : ' + github + ' | CodePen : ' + codepen);
     var bgimg = "linear-gradient(to " + app.position.bottom + " " + app.position.right + ", rgba(41, 36, 132, .4), rgba(52,73,94,.8)) " + app.position.center + " " + app.position.center + "/cover fixed,url('" + $bgImg + "')";
     var bgcolor = $bgColor;
