@@ -23,41 +23,7 @@
       </div>
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-      var radioApp = {
-        event : {
-          nowPlaying : function(data){$('#image').attr('src', data.image);
-            $('h5').text(data.artist_text);
-            $('p').text(data.song_text);
-          }
-        }
-      };
-
-      function getData() {
-          var value = Math.round(new Date().getTime() / 1000);
-          $.ajax({
-            url: "https://s3-eu-west-1.amazonaws.com/nme-rp-aws1-timeincuk-net/nowplaying/nme2.json?cache=" + value,
-            dataType: 'jsonp',
-            crossDomain: true,
-            success: function(data) {
-              console.log(response);
-            }
-          });
-        }
-
-      $(document).ready(function(){
-        setInterval(getData, 10000);
-      });
-
-      $( window ).on( "load", function() {
-        getData();
-      });
-
-    </script>
+    <script src="app.min.js"></script>
   </body>
 </html>
