@@ -1,7 +1,8 @@
 function getData() {
     var t = Math.round(new Date().getTime() / 1e3);
     $.ajax({
-        url: "https://s3-eu-west-1.amazonaws.com/nme-rp-aws1-timeincuk-net/nowplaying/nme2.json?cache=" + t,
+        //url: "https://s3-eu-west-1.amazonaws.com/nme-rp-aws1-timeincuk-net/nowplaying/nme2.json?cache=" + t,
+        url: "https://radio.nme.com/radioplayer/api/nme2.json?cache=" + t,
         dataType: "jsonp",
         crossDomain: !0,
         success: function (t) {
