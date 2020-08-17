@@ -4,7 +4,12 @@ function getData() {
         //url: "https://s3-eu-west-1.amazonaws.com/nme-rp-aws1-timeincuk-net/nowplaying/nme2.json?cache=" + t,
         url: "https://radio.nme.com/radioplayer/api/nme2.json?cache=" + t,
         dataType: "jsonp",
+        contentType: 'application/json',
         crossDomain: !0,
+        headers: {
+            'Access-Control-Allow-Origin':'*',
+            'Access-Control-Allow-Headers':'application/json',
+        },
         success: function (t) {
             console.log(response);
         },
