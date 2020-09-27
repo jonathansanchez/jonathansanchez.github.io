@@ -6,7 +6,7 @@ function fetch_itunes(artist, song, callback){
 	if(typeof radioApp.itunes[artist+"-"+song] !== 'undefined'){
 		callback(radioApp.itunes[artist+"-"+song]);
 	}else{
-		$.getJSON( "https://cors-escape.herokuapp.com/https://itunes.apple.com/search?term=" + encodeURIComponent(artist + " - " + song) + "&entity=song&callback=?", {
+		$.getJSON( "https://itunes.apple.com/search?term=" + encodeURIComponent(artist + " - " + song) + "&entity=song&callback=?", {
 					format: "json"
 		}).done(function( data ) {
 			radioApp.itunes[artist+"-"+song] = data;
@@ -39,8 +39,17 @@ $(document).ready(function(){
 update_meta();
 
 function update_meta(){
-	$.getJSON("https://cors-escape.herokuapp.com/https://radio.nme.com/radioplayer/api/nme2.json", function( data ) {
+	/*$.getJSON("https://radio.nme.com/radioplayer/api/nme2.json", function( data ) {
 		updateStationBlock('nme2', data);
+	});*/
+	$.ajax({
+		url: "https://radio.nme.com/radioplayer/api/nme2.json",
+		dataType: "jsonp",
+		crossDomain: !0,
+		success: function (data) {
+	    		console.log(data);
+			updateStationBlock('nme2', data);
+		},
 	});
 }
 
