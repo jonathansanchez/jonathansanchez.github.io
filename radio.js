@@ -39,8 +39,7 @@ $(document).ready(function(){
 update_meta();
 
 function update_meta(){
-	//$.getJSON("nme2.json", function( data ) {
-	$.getJSON("https://radio.nme.com/radioplayer/api/nme2.json", function( data ) {
+	$.getJSON("https://cors-escape.herokuapp.com/https://radio.nme.com/radioplayer/api/nme2.json", function( data ) {
 		updateStationBlock('nme2', data);
 	});
 }
