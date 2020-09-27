@@ -44,8 +44,9 @@ function update_meta(){
 	});*/
 	$.ajax({
 		url: "https://radio.nme.com/radioplayer/api/nme2.json",
-		dataType: "jsonp",
-		crossDomain: !0,
+		dataType: "json",
+		//crossDomain: !0,
+		crossDomain: true,
 		success: function (data) {
 	    		console.log(data);
 			updateStationBlock('nme2', data);
