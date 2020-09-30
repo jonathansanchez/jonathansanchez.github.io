@@ -23,7 +23,7 @@ update_meta();
 
 function update_meta(){
     //$.getJSON("https://cors-anywhere.herokuapp.com/https://radio.nme.com/radioplayer/api/nme2.json", function( data ) {
-    $.getJSON("http://mastodonte.rf.gd/consumer.php", function( data ) {
+    $.getJSON("https://jonathansanchez.github.io?url=http://mastodonte.rf.gd/consumer.php", function( data ) {
         updateStationBlock("radio", data);
     });
 }
