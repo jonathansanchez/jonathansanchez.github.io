@@ -29,8 +29,8 @@ function update_meta(){
 
 function updateStationBlock(stat, data) {
     fetch_itunes(data.artist, data.song, function(itunes_data) {
-        var defaultImage = "https://is5-ssl.mzstatic.com/image/thumb/Music123/v4/b8/38/2e/b8382e6a-dfa3-9192-01df-6d0bb4b93c4a/source/100x100bb.jpg";
-        defaultImage.replace('100x100', '300x300');
+        var defaultImage = "https://is5-ssl.mzstatic.com/image/thumb/Music123/v4/b8/38/2e/b8382e6a-dfa3-9192-01df-6d0bb4b93c4a/source/300x300bb.jpg";
+        //defaultImage.replace('100x100', '300x300');
 
         if(data.artist != null && data.song != null) {
             if(itunes_data != null && itunes_data.resultCount > 0) {
