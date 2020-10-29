@@ -22,7 +22,8 @@ $(document).ready(function(){
 update_meta();
 
 function update_meta(){
-    $.getJSON("https://cors-anywhere.herokuapp.com/https://radio.nme.com/radioplayer/api/nme2.json", function( data ) {
+    //$.getJSON("https://cors-anywhere.herokuapp.com/https://radio.nme.com/radioplayer/api/nme2.json", function( data ) {
+    $.getJSON("https://soportefull.cl/radio.php", function( data ) {
         updateStationBlock("radio", data);
     });
 }
